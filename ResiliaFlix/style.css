@@ -1,0 +1,86 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    background: #303030;
+    width: 100%;
+    display: flex;
+    padding: 15px 0 5px;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.container h1{
+    color: #fff000;
+    font-size: 1.4rem;   
+}
+
+.container .selecoes{
+    display: flex;
+
+}
+
+header li{
+    color: #000;
+    margin-left:10px; 
+    background: yellow;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+main{
+    background: rgb(253, 255, 160);    
+    display: flex;
+    justify-content: center;    
+}
+
+.filmes{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.filmes li img{
+    width: 15vw;
+    border-radius: 5px;
+    margin: 25px;
+}
+
+
+
+footer{  
+    display: flex;
+    background: #303030;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.link ul{
+    display: flex;
+
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 10px;
+}
+
+
+footer p{
+    text-align: center;
+    color: #FFF000;
+    font-size: 11px;
+    font-weight: bold;
+}
