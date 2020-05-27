@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let valor = 4;
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+
+    function dobrar(valor){
+      return valor * 2;
+    }
+    function mostrarDobro(valor){
+      document.write("O dobro de " +valor+" é "+dobrar(valor)+".");
+      pulaLinha();
+    }
+
+    mostrarDobro(valor);  
+
+    function dividirPorDois(valor){
+      return valor / 2;
+    }
+    function mostrarDivisao(valor){
+      document.write("A metade de " +valor+" é "+dividirPorDois(valor)+".");
+      pulaLinha();
+    }
+
+    mostrarDivisao(valor);
+
+    let nome = "Koman";
+
+    function saudar(nome){
+      document.write("Olá "+nome+", tudo bem.");
+      pulaLinha();
+    }
+
+    saudar(nome);
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
