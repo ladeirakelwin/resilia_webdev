@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    let valor = 2;
+    let valor = 4;
 
-    function dividir(valor){
-      document.write("A metade de "+valor+" é "+ (valor/2)+".");
+    function dividirPorDois(valor){
+      return valor / 2;
     }
+    function mostrar(valor){
+      document.write("A metade de " +valor+" é "+dividirPorDois(valor)+".");
+     }
 
-    dividir(valor);
+    mostrar(valor);
   </script>
 </head>
 

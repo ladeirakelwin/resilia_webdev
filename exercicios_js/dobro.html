@@ -9,8 +9,13 @@
     let valor = 2;
 
     function dobrar(valor){
-      document.write("O dobro de "+valor+" é "+ (valor*2)+".");
+      return valor * 2;
     }
+    function mostrar(valor){
+      document.write("O dobro de " +valor+" é "+dobrar(valor)+".");
+    }
+
+    mostrar(valor);
 
     dobrar(valor);
   </script>
