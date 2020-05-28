@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let valor = 4;
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+
+    function sobraDeLaranjas(laranjas,vizinhos){
+      return Math.round(laranjas%vizinhos);
+    }
+    function mostrar(laranjas, vizinhos){
+      document.write("Quantidade de laranja(s) que sobra para o Joselito é de: "+ sobraDeLaranjas(laranjas, vizinhos)+" laranja(s).");
+      pulaLinha();
+    }
+
+    let qteLaranjas = prompt("Joselito, informe a quantidade de laranjas que seus vizinhos possuem: ");
+    let qteVizinhos = prompt("Joselito, informe a quantidade de vizinhos: ");
+
+    mostrar(qteLaranjas, qteVizinhos);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
