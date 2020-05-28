@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pulaLinha(){
+      return "\n";
+    }
+
+    function quebraLinha(){
+      return "<br>";
+    }
+    
+    function menu(texto){
+      return ("1-Refrigerante"+pulaLinha()+"2-Suco"+pulaLinha()+"3-Água"+pulaLinha()+"Digite o número da bebida selecionada:");
+    }
+
+    function itemSelecionado(item){
+      if(item == 1){
+        document.write("Refrigerante foi selecionado."+quebraLinha());
+
+      } else if(item == 2){
+        document.write("Suco foi selecionado."+quebraLinha());
+
+      } else if(item == 3){
+        document.write("Água foi selecionada."+quebraLinha());
+
+      } else{
+        document.write("Opção indisponível, selecione 1, 2 ou 3.");
+      }
+    }
+
+    itemSelecionado(
+      prompt(menu()
+      )
+    );
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

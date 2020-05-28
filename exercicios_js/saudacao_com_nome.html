@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+
+    function quebraLinha(){
+      return "<br>";
+    }
+
+    function mostrar(nome){
+      document.write("Olá "+ nome+ "."+ quebraLinha() + "Tudo bem " + nome +".");
+      pulaLinha();
+    }
+
+    let nome = "Aaron";
+
+    mostrar(nome);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

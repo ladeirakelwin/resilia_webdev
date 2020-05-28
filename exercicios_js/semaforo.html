@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+
+    function semaforo(cor){
+      if(cor  == "Verde" || cor == "verde"){
+        document.write("pode passar!");
+        pulaLinha();
+      } else if(cor == "Amarelo" || cor  == "amarelo"){
+        document.write("melhor freiar.");
+        pulaLinha();
+      } else if(cor == "Vermelho" || cor == "vermelho"){
+        document.write("pare já!");
+      } else{
+        document.write("Opção indisponível, selecione as cores (V)verde, (A)amarelo ou (V)vermelho.");
+      }
+    }
+
+    let cor = "amarelo";
+
+    semaforo(cor);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

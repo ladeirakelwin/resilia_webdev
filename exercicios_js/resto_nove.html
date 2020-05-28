@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+    
+
+    function restoOfNine(number){
+      return number % 9;
+    }
+
+    function mostrar(number){
+      document.write("O resto de "+ number +" divido por 9 é: "+ restoOfNine(number)+ ".");
+      pulaLinha();
+    }
+
+    let number = 34;
+
+    mostrar(number);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

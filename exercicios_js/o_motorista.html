@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pulaLinha(){
+      document.write("<br>");
+    }
+
+    function permissaoAutomotiva(idade, idadeMinima){
+      if(idade >= idadeMinima){
+        document.write("Você pode dirigir.");
+        pulaLinha();
+
+      } else{
+        document.write("Você não pode dirigir");
+        pulaLinha();
+      }
+    }
+
+    let idade = 19;
+    let idadeMinima =18;
+
+    permissaoAutomotiva(idade, idadeMinima);
+
+  </script>
+</head>
+
+<body>
+
+</body>
