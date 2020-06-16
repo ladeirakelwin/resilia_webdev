@@ -1,32 +1,144 @@
+<!DOCTYPE html>
+//Resposta pelo Prompt
 <html>
-    <meta charset="utf=8">
+    <meta charset="UTF-8">
 
 <script>
-function rodaJogo(){
+function bora(){
   //Primeira fase do jogo:
-  var primeiraEscolha = primeiraFase();
-  if (primeiraEscolha == 2) {
-    //continua jogo
-      document.write("Continua jogo!");
-  } else {
-    //condicao de derrota
-    document.write("Derrotado!");
-  }
-  
-
+  introducao();  
 }
 
-function primeiraFase(){
-  
-  while (true) {
-    var resposta = prompt("Faça sua primeira escolha: 1 ou 2");
-    if (resposta == 2 || resposta == 1) {
-      return resposta;
+function introducao(){
+  let kong = 0;
+  while(kong == 0){
+    let resposta = Number(prompt("Yone vs Dragões - Na saga do tempo\nNo japão feudal na província de fukuoka,\n    existe uma pequena vilarejo chamada de yoshinogari.\n    Nesse tempo havia um grande samurai, Kenshiro.\n    Ele é o mestre de vários samurais de renome,\n    sendo os últimos discípulos Yone e Shaka.\n    Este último sumiu do mapa depois de não aceita\n    que yone seria o sucessor do mestre.\n    Enquanto no treinamento de Yone para se tornar\n    o sucessor, aparece seu irmão Kentaro, dizendo que\n    que sua família foi sequestrada o que ele irá fazer?\n    1 - Irá imediatamente para o local do sequestro\n    2 - Irá esperar um pouco mais para ir com seu mestre.\n"));
+    if(resposta == 1) {
+      return casa();
+    }else if(resposta == 2){
+      return alert("Shaka assasinou sua familia"), bora();
+    }else{
+      introducao();
     }
   }
 }
 
-rodaJogo();
+function casa(){
+  while (true) {
+    let respostaCasa = Number(prompt("Ao chegar no local de sequestro,\na casa de sua família, Yone pensa \nque pode ter uma armadilha.\nQual por onde da casa ele deve entrar?\n1 - Fundos\n2 - Janela esquerda\n3 - Porta da frente\n4 - Janela direita"));
+    switch(respostaCasa){
+      case 2:
+        return interiorCasa();
+        break;
+      case 1:
+        return alert("Caiu na armadilha de shaka e morreu com uma kunai venenosa."), bora();
+        break;
+      case 3:
+        return alert("Caiu na armadilha de shaka e morreu com senbons venenosas."), bora();
+        break;
+      case 4:
+        return alert("Caiu na armadilha de shaka e morreu com uma shuriken venenosa."), bora();
+        break;
+      default:
+        casa();
+    }
+  }
+}
+
+function interiorCasa(){
+  //Posteriormente implementa a mecanica do pote com cobra aleatório
+  while (true) {
+    let respostaICasa = Number(prompt("Dentro de casa yone encontra uma carta\n deixada pelo sequestrador, que como\njá desconfiava era shaka em vingança\npor ter sido preterido em relação\nsucessão como mestre do clã Amatsukami.\nNesta carta shaka afirma que um dos potes \ntem a localização de sua família e outro\ntem um cobra peçonhenta.\nQual pote yone deve meter a mão?\nPote 1 ou 2?"));
+    switch (respostaICasa){
+      case 1:
+      return alert("Shaka foi picado por uma cobra, e morreu dolorosamente."), bora();
+      case 2:
+      return florestaKunenan();        
+      default:
+       interiorCasa();
+    }
+  }
+}
+
+function florestaKunenan(){
+  
+  while (true) {
+    let respostaFloresta = Number(prompt("Esta outra carta estava escrito\nque sua família e Shaka estavam\nno templo Amaterasu, dentro da\nfloresta kunenan. E que 2 dois dos \ntrês únicos caminhos teriam capangas e\narmadilhas. Por qual caminho Yone dever ir\n1 - Pela cachoeira\n2 - Pela parte central da floresta\n3 - Pelos mais periféricas da floresta"));
+    switch(respostaFloresta){
+      case 1:
+        return alert("Caiu na armadilha de Shaka, pisando sem querer em um buraco com estacas de bambo e morreu"), bora();
+      case 2:
+        return alert("Caiu na armadilha de Shaka e morreu com uma espada pelas costas dos capangas de Shaka, junto com seu mestre."), bora();
+      case 3:
+        return temploAmaterasu();
+      default:
+        florestaKunenan();
+    }
+  }
+}
+
+function temploAmaterasu(){
+  while (true) {
+    let respostaAmaterasu = Number(prompt("Ao chegar no templo Amaterasu,\nKenshiro e Yone batalham contra Shaka.\nNo climax da luta Yone tem derrotar\nShaka, mas qual tática este irá usar?\n1 - Usar golpe honrado\n2 - Usar golpes desonrado\n3 - Usar uma arma de longa de distância\nde surpresa."));
+    switch(respostaAmaterasu) {
+      case 1:
+        return alert("Ao tentar usar táticas honradas Shaka mata seu mestre e foge com a sua família transformando-os um origami e fugindo por um portal"), bora();
+      case 2:
+        return alert("Ao tentar usar táticas de desonradas Shaka, recebe danos mas antes de morrer mata sua família com veneno."), bora();
+      case 3:
+        return vielaBairroLiberdade();
+      default:
+        temploAmaterasu();
+    }
+  }
+}
+
+function vielaBairroLiberdade(){
+  while (true) {
+    let respostaBairro = Number(prompt("Após shaka perceber que estava muito\npressiona resolve jogar uma bomba de fumaça\ntransforma a família de Yone em origami\ne foge por um portal, que é fechado\nlogo após este entrar.\nMas seu mestre conhecia essa técnica\ne criou um portal rastreando\no anterior. Ao chegar no local\n do outro lado do portal, eles percebem\n que não estão no japão, mas pelo kanjis\n estão no bairro da liberdade, Brasil.\nNo meio de uma festa, e tem que se decidir\n por onde irão procurar Shaka, em meio\na festa das flores.Qual direção\neles irão na viela?\n1 - saída à direita\n2 - saída à esquerda"));
+    switch(respostaBairro){
+      case 1:
+        return portalDragoes();
+      case 2:
+        return alert("Yone e Kenshiro esbarram em uma gang ao sair da viela, e são fuzilados, por se parecem com a vestimenta de uma gang inimiga."), bora();
+        break;
+      default:
+        vielaBairroLiberdade();
+    }
+  }
+}
+
+function portalDragoes(){
+  while (true) {
+    let respostaPortal = Number(prompt("Chegando na multidão Kenshiro avista\nShaka adentrando um templo com\nportais de dragões robóticos\n.Ao chegar neste Shaka utiliza seu resto de mana\npara transformar estes portais\n em dragões de verdade, o que yone fará?\n1 - Yone irá segurar os dragões enquanto seu mestre em quanto seu mestre irá selá-los\n2 - Yone e seus mestre tentam matar estes dragões."));
+    switch(respostaPortal) {
+      case 1:
+        return finalTemploDragao();
+      case 2:
+        return alert("Yone e Kenshiro sensei, sucumbem ao poderio ilimitado dos dragões e são mortos."), bora();
+      default:
+        portalDragoes();
+    }
+  }
+}
+
+function finalTemploDragao(){
+  while (true) {
+  let respostaDragao = Number(prompt("Após conseguir selar os dragões,\nYone resolve lutar sozinho com\nShaka dispensando a ajuda de\nseu mestre. No final da batalha Yone\nestá sendo pressionado. O que ele\nfará para matar Shaka e salvar\nsua família?\n1 - Irá pedir para que desonrradamente seu mestre batalhe.\n2 - Irá dar o golpe Suiton\n3 - Irá dar o golpe Raikiri"));
+    switch(respostaDragao) {
+    case 1:
+      return alert("Ao perceber isso Shaka, matará sua família"), bora();
+    case 2:
+      return alert("Yone acerta o golpe no peito e mata Shaka. Salvando sua família"), bora();
+    case 3:
+      return alert("Yone erra o golpe e shaka o mata, fugindo com a sua família."), bora();
+    default:
+      finalTemploDragao();
+    }
+  }
+}
+
+bora();
 </script>
 
 </html>
